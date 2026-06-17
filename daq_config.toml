@@ -1,0 +1,13 @@
+[daq]
+device = "Dev1"
+sample_rate_hz = 1000
+samples_per_callback = 100
+duration_s = 10
+buffer_seconds = 5
+
+[[channels]]
+name = "ai0"
+physical_channel = "ai0"
+enabled = true
+min_v = -10.0
+max_v = 10.0
