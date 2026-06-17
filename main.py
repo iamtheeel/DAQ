@@ -27,6 +27,8 @@ def main():
 
     try:
         while time.time() - start_time < duration_s:
+            # Get a chunk of data from the DAQ with a timeout of 2 seconds
+            # the number of samples in the chunk will be equal to samples_per_callback
             timestamp, data = daq.get_chunk(timeout=2.0)
 
             print(f"\n{timestamp}")

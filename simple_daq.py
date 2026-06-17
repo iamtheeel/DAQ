@@ -99,6 +99,14 @@ class SimpleDAQ:
             self.task.close()
             self.task = None
 
+    '''
+    Get a chunk of data from the DAQ.
+    Returns a tuple of (timestamp, data) where:
+      - timestamp is a datetime object representing when the data was acquired
+      - data is a 2D numpy array of shape (num_channels, num_samples)
+      - num_channels is the number of enabled channels in the config file
+      - num_samples is the number of samples acquired in this chunk (equal to samples_per_callback
+    '''
     def get_chunk(self, timeout=1.0):
         return self.data_queue.get(timeout=timeout)
 
