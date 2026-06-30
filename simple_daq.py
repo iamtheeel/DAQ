@@ -110,5 +110,6 @@ class SimpleDAQ:
     def get_chunk(self, timeout=1.0):
         return self.data_queue.get(timeout=timeout)
 
-    def channel_names(self):
-        return [ch["name"] for ch in self.channels]
+    def channel_info(self):
+        #return [ch["name"] for ch in self.channels]
+        return self.channels

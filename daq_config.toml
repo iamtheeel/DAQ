@@ -5,12 +5,16 @@ samples_per_callback = 100
 duration_s = 5
 buffer_seconds = 1
 
+[data]
+file_name = "outputFile.csv"
+
 [[channels]]
 name = "Ch 0"
 physical_channel = "ai0"
 enabled = true
 min_v = -10.0
 max_v = 10.0
+units = "V"
 
 [[channels]]
 name = "Ch 1"
@@ -18,3 +22,4 @@ physical_channel = "ai1"
 enabled = true
 min_v = -10.0
 max_v = 10.0
+units = "V"
